@@ -1,0 +1,233 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly MachineLearning, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class MachineLearning.Conversion: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 INPUT_NOT_A_NUMBER IsConst : Public, Static, HasDefault
+  Methods:
+    convertIntegerToString(Int32): PrivateScope, Public, Static, HideBySig
+    convertDoubleToString(Double): PrivateScope, Public, Static, HideBySig
+    convertStringToInteger(String): PrivateScope, Public, Static, HideBySig
+    convertStringToDouble(String): PrivateScope, Public, Static, HideBySig
+    binaryConverter(List`1, Int32 IsConst): PrivateScope, Public, Static, HideBySig
+    binaryConverter(List`1): PrivateScope, Public, Static, HideBySig
+    convertBinaryStringToInteger(String, Boolean(HasFieldMarshal)): PrivateScope, Public, Static, HideBySig
+    convertBinaryStringToDouble(String, Int32 IsConst): PrivateScope, Public, Static, HideBySig
+    MarshalString(String, basic_string<wchar_t\,std::char_traits<wchar_t>\,std::allocator<wchar_t> >* IsImplicitlyDereferenced): PrivateScope, Public, Static, HideBySig
+    MarshalString(String, basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, Static, HideBySig
+    convertStringToChar(String): PrivateScope, Public, Static, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.Training: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Collections.Generic.List`1[System.Double], Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double, Double, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    getClassID(): PrivateScope, Public, HideBySig
+    getNoAttributes(): PrivateScope, Public, HideBySig
+    getAttributeValue1(): PrivateScope, Public, HideBySig
+    getAttributeValue2(): PrivateScope, Public, HideBySig
+    getAttributeValues(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.Matrix: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(System.Collections.Generic.List`1[MachineLearning.Training]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Double]]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    calculateMean(Int32): PrivateScope, Public, HideBySig
+    createMeanMatrix(): PrivateScope, Public, HideBySig
+    calculateCorrectedMean(Int32, Int32, Double): PrivateScope, Public, HideBySig
+    calculateVariance(Int32): PrivateScope, Public, HideBySig
+    createCoVarianceMatrix(Matrix): PrivateScope, Public, HideBySig
+    createScatterMatrix(Matrix, Matrix): PrivateScope, Public, HideBySig
+    matrixAddition(Matrix, Matrix): PrivateScope, Public, HideBySig
+    matrixSubstraction(Matrix, Matrix): PrivateScope, Public, HideBySig
+    multiplyCellsWithValue(Double): PrivateScope, Public, HideBySig
+    matrixMultiplication(Matrix, Matrix, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    getOptimalLineMatrix(Matrix, Matrix, Matrix): PrivateScope, Public, HideBySig
+    getBetweenClassScatterMatrix(Matrix, Matrix): PrivateScope, Public, HideBySig
+    sumOfColumn(Int32): PrivateScope, Public, HideBySig
+    deleteMatrix(): PrivateScope, Public, HideBySig
+    transposeMatrix(): PrivateScope, Public, HideBySig
+    inverse2DMatrix(): PrivateScope, Public, HideBySig
+    fillMatrixWithValues(Int32, List`1&): PrivateScope, Public, HideBySig
+    changeCellValueAt(Int32, Int32, Double): PrivateScope, Public, HideBySig
+    getNumRows(): PrivateScope, Public, HideBySig
+    getNumColumns(): PrivateScope, Public, HideBySig
+    getMatrix(): PrivateScope, Public, HideBySig
+    getIdentityMatrix(): PrivateScope, Public, HideBySig
+    getCellValueAt(Int32 IsConst, Int32 IsConst): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.ExceptionClass: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    ToString(): PrivateScope, Public, Final, Virtual, HideBySig
+    getExceptionTitle(): PrivateScope, Public, HideBySig
+    throwErrorIfMatrixRowOutOfRange(Int32 IsConst, Int32 IsConst, String): PrivateScope, Public, Static, HideBySig
+    throwErrorIfMatrixColumnOutOfRange(Int32 IsConst, Int32 IsConst, String): PrivateScope, Public, Static, HideBySig
+    throwErrorIfMatrixIsEmpty(Int32 IsConst, Int32 IsConst): PrivateScope, Public, Static, HideBySig
+    throwErrorIfValueListIsEmpty(List`1): PrivateScope, Public, Static, HideBySig
+    throwErrorIfValueListIsEmpty(List`1): PrivateScope, Public, Static, HideBySig
+    throwErrorIfParentMatrixIsEmpty(Int32 IsConst, Int32 IsConst, String): PrivateScope, Public, Static, HideBySig
+    throwErrorIfMatrixNotOfEqualOrder(Matrix, Matrix): PrivateScope, Public, Static, HideBySig
+    throwErrorIfMatrixNot2x2(Int32 IsConst, Int32 IsConst): PrivateScope, Public, Static, HideBySig
+    throwErrorIfColumnAndRowCountDiffers(Int32, Int32, String): PrivateScope, Public, Static, HideBySig
+    throwErrorIfNewSizeLessThanCurrent(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Static, HideBySig
+    throwErrorIflistSizeIsNotEqual(List`1, List`1, String): PrivateScope, Public, Static, HideBySig
+    throwErrorIfSizeGreaterThenValue(Int32 IsConst, Int32 IsConst, String): PrivateScope, Public, Static, HideBySig
+    throwErrorIfSizeLessThenCount(Int32 IsConst, Int32 IsConst, String): PrivateScope, Public, Static, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.NeuralNetwork: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Double]] ByRef, System.Collections.Generic.List`1[System.Double] ByRef): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    trainSingularPerceptron(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    getWeightedSum(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    getWeightedMatrix(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    getResultingOutputMatrix(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    getLearningRate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.ArtificialNeuralNetwork: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :MachineLearning.NeuralNetwork
+    Void .ctor(System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Double]] ByRef, System.Collections.Generic.List`1[System.Double] ByRef): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class MachineLearning.Statistics: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.String FAILED_AT_VARIANCE_CALCULATION : Public, Static
+  Methods:
+    calculateMean(List`1): PrivateScope, Public, HideBySig
+    calculateMean(List`1): PrivateScope, Public, HideBySig
+    calculateVariance(List`1, Double): PrivateScope, Public, HideBySig
+    calculateStdDev(Double): PrivateScope, Public, HideBySig
+    calculateK1(Double, Double): PrivateScope, Public, HideBySig
+    calculateCoVariance(List`1, List`1): PrivateScope, Public, HideBySig
+    calculateCorrelationCoefficient(List`1, List`1): PrivateScope, Public, HideBySig
+    calculateLinearRegression(List`1, List`1, Double, Double* IsImplicitlyDereferenced, Double* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.Clustering: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(System.String, System.String, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    getSampleMatrix(): PrivateScope, Public, HideBySig
+    getCentroidMatrix(): PrivateScope, Public, HideBySig
+    getNoAttributes(): PrivateScope, Public, HideBySig
+    getNoSamples(): PrivateScope, Public, HideBySig
+    getNoCentroids(): PrivateScope, Public, HideBySig
+    getClusterGroupList(): PrivateScope, Public, HideBySig
+    getRescaledList(Int32): PrivateScope, Public, Static, HideBySig
+    calculateDistanceFromCentroids(Single, Int32, BackgroundWorker, DoWorkEventArgs): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.FileOperations: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 READ_SPACE_SEPERATED_TRAINING_FROM_FILE IsConst : Public, Static, HasDefault
+    Int32 READ_CSV_TRAINING_FROM_FILE IsConst : Public, Static, HasDefault
+  Methods:
+    readStringFromFile(String): PrivateScope, Public, HideBySig
+    writeStringToFile(String, List`1): PrivateScope, Public, HideBySig
+    readSymbolSeperatedStringFromFile(String, Char(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    readTrainingContentFromFile(String, Int32 IsConst, Boolean(HasFieldMarshal) IsConst, Int32): PrivateScope, Public, HideBySig
+    readInfiniteClusterAttributesFromFile(String, List`1&, Int32 IsConst): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.DecisionTree: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 CAN_NOT_CLASSIFY_SAMPLE IsConst : Public, Static, HasDefault
+  Methods:
+    createBinaryTree(List`1, Matrix&, Matrix&, Matrix&, String&): PrivateScope, Public, HideBySig
+    createBinaryTree(List`1, String&): PrivateScope, Public, HideBySig
+    printBinaryTree(BinaryTree, String&): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.DecisionTree+BinaryTree: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 classID : Public
+    System.String attributeName : Public
+    Double attributeValue : Public
+    BinaryTree left : Public
+    BinaryTree right : Public
+Class MachineLearning.DecisionTree+BinaryTreeLDA: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 classID : Public
+    System.String attributeName : Public
+    Double attributeValue : Public
+    BinaryTreeLDA left : Public
+    BinaryTreeLDA right : Public
+  Methods:
+    isValueGreaterThenThis(Double): PrivateScope, Public, HideBySig
+Class MachineLearning.Fuzzy: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.GeneticAlgorithm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 IS_DEFAULT_VALUE IsConst : Public, Static, HasDefault
+  Methods:
+    getGeneration(): PrivateScope, Public, HideBySig
+    getSumFitness(): PrivateScope, Public, HideBySig
+    getAvgFit(): PrivateScope, Public, HideBySig
+    getBinaryValues(): PrivateScope, Public, HideBySig
+    getFitnessValues(): PrivateScope, Public, HideBySig
+    getProbabilityPercentage(): PrivateScope, Public, HideBySig
+    getSelectedParents(): PrivateScope, Public, HideBySig
+    returnCalculatedProbability(List`1&, Double): PrivateScope, Public, HideBySig
+    initializeGA(Int32, Boolean(HasFieldMarshal), Int32, Double, Double): PrivateScope, Public, HideBySig
+    returnCalculatedFitness(List`1&, Double* IsImplicitlyDereferenced, Int32): PrivateScope, Public, HideBySig
+    returnCalculatedFitness(List`1&, Double* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    createNewGeneration(Double, Double, Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.HiddenMarkovModel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.SelfOrganisingMap: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :MachineLearning.NeuralNetwork
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    trainPerceptron(): PrivateScope, Public, Final, Virtual, HideBySig
+Class MachineLearning.SupportVectorMachine: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
